@@ -105,6 +105,7 @@ main {
 
 .overlay > p {
   color: #fff;
+  cursor: pointer;
 }
 
 .card {

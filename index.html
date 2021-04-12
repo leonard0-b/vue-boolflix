@@ -36,7 +36,8 @@
             <!-- <p>{{ movie.original_language }}</p> -->
             <p class="voto">{{ movie.vote_average }}/10</p>
             <img v-if="movie.original_language == 'en'" src="https://www.countryflags.io/gb/shiny/64.png">
-            <img v-elseif="movie.original_lenguage =='ko'" src="https://www.countryflags.io/kr/shiny/64.png" alt="">
+            <img v-else-if="movie.original_language == 'ko'" src="https://www.countryflags.io/kr/shiny/64.png" alt="">
+            <img v-else-if="movie.original_language == 'ja'" src="https://www.countryflags.io/jp/shiny/64.png" alt="">
             <img v-else :src=`https://www.countryflags.io/${movie.original_language}/shiny/64.png` alt="language">
           </div>
         </div>
