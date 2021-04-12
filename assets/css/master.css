@@ -10,11 +10,33 @@
 .flex {
   display: flex;
 }
+
+.title {
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.original-title {
+  font-weight: 400;
+  font-size: 35px;
+  font-style: italic;
+}
+
+.lang {
+
+}
+
+.voto {
+  font-weight: 400;
+  font-size: 20px;
+  font-style: italic;
+}
 /* /UTILITIES */
 
 /* NAVBAR */
 h1 {
   color: #fff;
+  font-size: 50px;
 }
 
 body {
@@ -67,16 +89,13 @@ header {
 /* /NAVBAR */
 
 /* MAIN */
-#root {
-}
-
 body {
   overflow-y: hidden;
 }
 
 main {
   margin-top: 100px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   overflow-y: auto;
 }
 
@@ -110,14 +129,27 @@ main {
 
 .overlay {
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   position: absolute;
+  padding: 20px;
   top: 0;
   width: 100%;
   height: 100%;
   display: none;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay > img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+}
+
+.overlay > p.voto {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
 main::-webkit-scrollbar {
