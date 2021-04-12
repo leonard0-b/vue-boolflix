@@ -32,6 +32,11 @@ body {
 header {
   background: linear-gradient(90deg, #9b2d2d, #a42f2e, #ae3130, #b73331, #c03632, #ca3833, #d33a34, #dd3d35);
   padding: 20px 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .search-bar > button {
@@ -56,7 +61,6 @@ header {
 }
 
 .search-bar {
-  /* border: 1px solid red; */
   padding: 10px 15px;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -65,6 +69,10 @@ header {
 /* /NAVBAR */
 
 /* MAIN */
+main {
+  margin-top: 100px;
+}
+
 .movie-content {
   flex-wrap: wrap;
 }
@@ -74,17 +82,26 @@ header {
 }
 
 .card {
-  width: calc(100% / 4);
-  border: 1px solid red;
+  border-radius: 10px;
+  width: calc(100%/4 - 40px);
+  margin: 10px 20px;
+  height: 530px;
   position: relative;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.poster > img {
+  border-radius: 10px;
+  width: 100%;
+  height: 530px;
 }
 
 .card:hover .overlay {
+  border-radius: 10px;
   display: block;
 }
 
 .overlay {
-  border: 1px solid red;
   position: absolute;
   top: 0;
   width: 100%;

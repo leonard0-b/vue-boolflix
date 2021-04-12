@@ -27,7 +27,8 @@
       <div class="movie-content flex">
         <div class="card" v-for="movie in movies">
           <div class="poster">
-            <img :src=`https://image.tmdb.org/t/p/w342${movie.poster_path}` alt="poster">
+            <img v-if="movie.poster_path != null" :src=`https://image.tmdb.org/t/p/w342/${movie.poster_path}` alt="poster">
+            <img v-else src="./assets/img/img-notfound.png" alt="not-found">
           </div>
           <div class="overlay">
             <p>{{ movie.title }}</p>
