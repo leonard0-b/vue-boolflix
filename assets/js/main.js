@@ -14,6 +14,7 @@ var app = new Vue (
           console.log(response.data.results);
           this.movies = response.data.results;
           console.log(this.movies);
+
         })
       }
     }
