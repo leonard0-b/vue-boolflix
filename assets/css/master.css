@@ -112,8 +112,8 @@ main {
 
 .card {
   border-radius: 10px;
-  width: calc(100%/4 - 40px);
-  margin: 10px 20px;
+  width: calc(100%/4 - 20px);
+  margin: 15px 10px;
   height: 530px;
   position: relative;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -131,12 +131,12 @@ main {
 }
 
 .descrizione {
+  margin-top: 10px;
   height: 30%;
   overflow-y: auto;
 }
 
 .descrizione > p {
-
   color: #fff;
 }
 
