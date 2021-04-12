@@ -1,3 +1,4 @@
+/* UTILITIES */
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +7,19 @@
   font-family: 'Lato', sans-serif;
 }
 
+.flex {
+  display: flex;
+}
+
+/* /UTILITIES */
+
+/* NAVBAR */
 h1 {
   color: #fff;
 }
 
 body {
   background-color: #111010;
-}
-
-.flex {
-  display: flex;
 }
 
 .container {
@@ -31,6 +35,7 @@ header {
 }
 
 .search-bar > button {
+  outline: none;
   border: none;
   background-color: inherit;
 }
@@ -56,3 +61,23 @@ header {
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+
+/* /NAVBAR */
+
+/* MAIN */
+.movie-content {
+  flex-wrap: wrap;
+}
+
+.card > p {
+  color: #fff;
+}
+
+.card {
+  width: calc(100% / 4);
+  border: 1px solid red;
+}
+
+
+
+/* /MAIN */

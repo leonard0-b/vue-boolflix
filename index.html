@@ -23,6 +23,16 @@
         </div>
       </div>
     </header>
+    <main>
+      <div class="movie-content flex">
+        <div class="card" v-for="movie in movies">
+          <p>{{ movie.title }}</p>
+          <p>{{ movie.original_title }}</p>
+          <p>{{ movie.original_language }}</p>
+          <p>{{ movie.vote_average }}</p>
+        </div>
+      </div>
+    </main>
   </div>
 
 
