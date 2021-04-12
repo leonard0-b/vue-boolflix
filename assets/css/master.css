@@ -69,8 +69,17 @@ header {
 /* /NAVBAR */
 
 /* MAIN */
+#root {
+}
+
+body {
+  overflow-y: hidden;
+}
+
 main {
   margin-top: 100px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
 }
 
 .movie-content {
