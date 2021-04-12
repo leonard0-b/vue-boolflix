@@ -18,7 +18,7 @@
           <h1>Bongiflix</h1>
         </div>
         <div class="search-bar">
-          <input type="text" name="" value="" placeholder="Cerca un film..." v-model="searchMovie">
+          <input type="text" name="" value="" placeholder="Cerca un film..." v-model="search">
           <button @click="getMovie"><i class="fas fa-search"></i></button>
         </div>
       </div>
@@ -31,8 +31,8 @@
             <img v-else src="./assets/img/img-notfound1.png" alt="not-found">
           </div>
           <div class="overlay flex">
-            <p class="title">{{ movie.title }}</p>
-            <p class="original-title">{{ movie.original_title }}</p>
+            <p class="title">{{ movie.title || movie.name }}</p>
+            <p class="original-title">{{ movie.original_title || movie.original_name }}</p>
             <div class="descrizione">
               <p class="overview">{{ movie.overview }}</p>
             </div>
