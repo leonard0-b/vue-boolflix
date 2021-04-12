@@ -26,12 +26,17 @@
     <main>
       <div class="movie-content flex">
         <div class="card" v-for="movie in movies">
-          <p>{{ movie.title }}</p>
-          <p>{{ movie.original_title }}</p>
-          <p>{{ movie.original_language }}</p>
-          <p>{{ movie.vote_average }}</p>
-          <img v-if="movie.original_language == 'en'" src="https://www.countryflags.io/us/flat/64.png">
-          <img v-else :src=`https://www.countryflags.io/${movie.original_language}/flat/64.png` alt="language">
+          <div class="poster">
+            <img :src=`https://image.tmdb.org/t/p/w342${movie.poster_path}` alt="poster">
+          </div>
+          <div class="overlay">
+            <p>{{ movie.title }}</p>
+            <p>{{ movie.original_title }}</p>
+            <p>{{ movie.original_language }}</p>
+            <p>{{ movie.vote_average }}</p>
+            <img v-if="movie.original_language == 'en'" src="https://www.countryflags.io/us/shiny/64.png">
+            <img v-else :src=`https://www.countryflags.io/${movie.original_language}/shiny/64.png` alt="language">
+          </div>
         </div>
       </div>
     </main>

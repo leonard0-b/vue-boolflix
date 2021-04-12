@@ -6,6 +6,7 @@ var app = new Vue (
     data: {
       searchMovie: "",
       movies: [],
+      serie: [],
     },
     methods: {
       getMovie: function (){
@@ -15,6 +16,7 @@ var app = new Vue (
           this.movies = response.data.results;
           console.log(this.movies);
 
+          this.movies.sort((a, b) => (b.vote_average - a.vote_average));
         })
       }
     }
