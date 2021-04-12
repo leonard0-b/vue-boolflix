@@ -10,7 +10,6 @@
 .flex {
   display: flex;
 }
-
 /* /UTILITIES */
 
 /* NAVBAR */
@@ -65,7 +64,6 @@ header {
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-
 /* /NAVBAR */
 
 /* MAIN */
@@ -107,10 +105,13 @@ main {
 
 .card:hover .overlay {
   border-radius: 10px;
-  display: block;
+  display: flex;
 }
 
 .overlay {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 0;
   width: 100%;
@@ -119,7 +120,19 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+main::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
 
+main::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(220, 220, 220, 0.1); /* color of the tracking area */
+}
+
+main::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #9b2d2d, #a42f2e, #ae3130, #b73331, #c03632, #ca3833, #d33a34, #dd3d35); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
 
 
 
