@@ -13,18 +13,18 @@
 
 .title {
   font-weight: 700;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .original-title {
   font-weight: 400;
-  font-size: 35px;
+  font-size: 25px;
   font-style: italic;
 }
 
 .overview {
   margin-top: 15px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .voto {
@@ -130,6 +130,16 @@ main {
   display: flex;
 }
 
+.descrizione {
+  height: 30%;
+  overflow-y: auto;
+}
+
+.descrizione > p {
+
+  color: #fff;
+}
+
 .overlay {
   flex-direction: column;
   justify-content: center;
@@ -154,7 +164,9 @@ main {
   bottom: 20px;
   left: 20px;
 }
+/* /MAIN */
 
+/* scrollbar */
 main::-webkit-scrollbar {
   width: 12px; /* width of the entire scrollbar */
 }
@@ -169,6 +181,17 @@ main::-webkit-scrollbar-thumb {
   border-radius: 20px; /* roundness of the scroll thumb */
 }
 
+.descrizione::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
 
+.descrizione::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(220, 220, 220, 0.1); /* color of the tracking area */
+}
 
-/* /MAIN */
+.descrizione::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #9b2d2d, #a42f2e, #ae3130, #b73331, #c03632, #ca3833, #d33a34, #dd3d35); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+/* /scrollbar */

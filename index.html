@@ -33,7 +33,9 @@
           <div class="overlay flex">
             <p class="title">{{ movie.title }}</p>
             <p class="original-title">{{ movie.original_title }}</p>
-            <p class="overview">{{ movie.overview }}</p>
+            <div class="descrizione">
+              <p class="overview">{{ movie.overview }}</p>
+            </div>
             <!-- <p>{{ movie.original_language }}</p> -->
             <p class="voto">{{ movie.vote_average }}/10</p>
             <img v-if="movie.original_language == 'en'" src="https://www.countryflags.io/gb/shiny/64.png">
