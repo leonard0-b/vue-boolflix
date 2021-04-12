@@ -4,7 +4,19 @@ var app = new Vue (
   {
     el: "#root",
     data: {
+      searchMovie: "",
+      titolo: [],
+      titoloOriginale: [],
+      lingua: [],
+      voto: [],
     },
-    
+    methods: {
+      getMovie: function (){
+        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=e23a6721c7b2483cf2f94f3a47f7288d&language=it&query=${this.searchMovie}`)
+          .then((response) => {
+          console.log(response.data.results);
+        })
+      }
+    }
   }
 );

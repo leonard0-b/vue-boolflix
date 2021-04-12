@@ -18,8 +18,8 @@
           <h1>Bongiflix</h1>
         </div>
         <div class="search-bar">
-          <input type="text" name="" value="" placeholder="Cerca un film...">
-          <button><i class="fas fa-search"></i></button>
+          <input type="text" name="" value="" placeholder="Cerca un film..." v-model="searchMovie">
+          <button @click="getMovie"><i class="fas fa-search"></i></button>
         </div>
       </div>
     </header>
