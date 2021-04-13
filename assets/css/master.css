@@ -195,3 +195,55 @@ main::-webkit-scrollbar-thumb {
   border-radius: 20px; /* roundness of the scroll thumb */
 }
 /* /scrollbar */
+@media all and (max-width: 1024px) {
+  .card {
+    width: calc(100%/3 - 20px)
+  }
+}
+
+@media all and (max-width: 768px) {
+  .card {
+    width: calc(100% / 2 - 20px);
+  }
+}
+
+@media all and (max-width: 576px) {
+  .card {
+    width: calc(100%);
+  }
+
+  h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  main {
+    margin-top: 115px;
+  }
+
+  .movie-content {
+    margin-bottom: 15px;
+  }
+}
+
+/* @media all and (max-width: 576px) {
+  .card {
+    width: calc(100% - 40px);
+  }
+
+  .music-select {
+    flex-direction: column;
+  }
+
+  select {
+    margin: 15px 0;
+  } */ */
+}
