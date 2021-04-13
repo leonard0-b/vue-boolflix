@@ -14,7 +14,7 @@
 
 .title {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .original-title {
@@ -83,6 +83,21 @@ header {
 
 ::placeholder {
   color: #fff;
+}
+
+select {
+  width: 130px;
+  margin-left: 20px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: inherit;
+  border: none;
+  color: #fff;
+}
+
+option {
+  background-color: #d32f2f;
 }
 
 .search-bar {
@@ -206,7 +221,7 @@ div.stars {
 
 /* scrollbar */
 main::-webkit-scrollbar {
-  width: 12px; /* width of the entire scrollbar */
+  width: 8px; /* width of the entire scrollbar */
 }
 
 main::-webkit-scrollbar-track {

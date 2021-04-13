@@ -10,6 +10,8 @@ var app = new Vue (
       uri: "https://api.themoviedb.org/3",
       movies: [],
       series: [],
+      selected: "",
+      movieGenres: []
     },
     methods: {
       getMovie: function (){
@@ -28,7 +30,7 @@ var app = new Vue (
               // console.log(episodi);
               this.movies.push(episodi);
 
-              // ordinol'array in base al voto, dal maggiore al minore
+              // ordino l'array in base al voto, dal maggiore al minore
               this.movies.sort((a, b) => (b.vote_average - a.vote_average));
               this.search = "";
             });
@@ -46,6 +48,13 @@ var app = new Vue (
       eng: function (){
         this.lang = "en"
         console.log(this.lang);
+      },
+      getGenre: function (){
+        axios.get(`${this.uri}/genre/movie/list?api_key=${this.api_key}&language=${this.lang}`)
+          .then((response) => {
+            console.log(response.data.genres);
+            this.movieGenres = response.data.genres;
+        })
       }
     }
   }

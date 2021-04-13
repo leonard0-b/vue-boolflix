@@ -22,6 +22,13 @@
             <input type="text" name="" value="" placeholder="Cerca un film o una serie..." v-model="search" @keyup.enter="getMovie">
             <button @click="getMovie"><i class="fas fa-search"></i></button>
           </div>
+          <!-- c'è ma non mi piace :p -->
+          <div class="select">
+            <select v-model="selected" @click="getGenre">
+              <option value="">Tutti i Generi</option>
+              <option v-for="genre in movieGenres" :value="genre.id">{{ genre.name }}</option>
+            </select>
+          </div>
           <div class="switch-lang">
             <button class="ita"><span @click="ita">ITA</span></button>
             <button><span @click="eng">ENG</span></button>
@@ -31,7 +38,7 @@
     </header>
     <main>
       <div class="movie-content flex">
-        <div class="card" v-for="movie in movies">
+        <div class="card" v-for="movie in movies" v-if="movie.genre_ids.includes(selected) || selected == ''">
           <div class="poster">
             <img v-if="movie.poster_path != null" :src=`https://image.tmdb.org/t/p/w342/${movie.poster_path}` alt="poster">
             <img v-else src="./assets/img/img-notfound1.png" alt="not-found">
@@ -57,12 +64,6 @@
       </div>
     </main>
   </div>
-
-
-
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
   <script src="./assets/js/main.js" charset="utf-8"></script>
