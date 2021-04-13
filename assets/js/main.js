@@ -11,6 +11,8 @@ var app = new Vue (
       movies: [],
       series: [],
       selected: "",
+      placeholderSearch: "Cerca un film o una serie...",
+      searchTitle: "Tutti i Generi",
       movieGenres: []
     },
     methods: {
@@ -43,10 +45,14 @@ var app = new Vue (
       },
       ita: function (){
         this.lang = "it"
+        this.placeholderSearch = "Cerca un film o una serie...";
+        this.searchTitle = "Tutti i Generi"
         console.log(this.lang);
       },
       eng: function (){
         this.lang = "en"
+        this.placeholderSearch = "Search movies or tv series..."
+        this.searchTitle = "All Genres"
         console.log(this.lang);
       },
       getGenre: function (){

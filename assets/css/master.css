@@ -74,7 +74,7 @@ header {
 }
 
 .search-bar > input {
-  width: 200px;
+  width: 250px;
   color: #fff;
   border: 0;
   outline: 0;
@@ -258,6 +258,15 @@ main::-webkit-scrollbar-thumb {
   .card {
     width: calc(100% / 2 - 6px);
   }
+
+  h1 {
+    font-size: 40px;
+    margin-right: 25px;
+  }
+
+  .search-bar > input {
+    width: 180px;
+  }
 }
 
 @media all and (max-width: 576px) {
@@ -268,6 +277,7 @@ main::-webkit-scrollbar-thumb {
   h1 {
     font-size: 35px;
     margin-bottom: 20px;
+    margin-right: 0;
   }
 
   .container {
@@ -285,5 +295,28 @@ main::-webkit-scrollbar-thumb {
   .movie-content {
     margin-top: 25px;
     margin-bottom: 15px;
+  }
+
+  .search-bar > input {
+    width: 170px;
+  }
+
+  select {
+    display: none;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .search-bar > input {
+    width: 150px;
+    font-size: 12px;
+  }
+
+  .search-bar {
+    margin-left: 5px;
+  }
+
+  .movie-content {
+    margin-top: 5px;
   }
 }

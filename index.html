@@ -18,18 +18,18 @@
           <h1>Bongiflix</h1>
         </div>
         <div class="cmd flex">
-          <div class="search-bar">
-            <input type="text" name="" value="" placeholder="Cerca un film o una serie..." v-model="search" @keyup.enter="getMovie">
+          <div class="search-bar flex">
+            <input type="text" name="" value="" :placeholder="placeholderSearch" v-model="search" @keyup.enter="getMovie">
             <button @click="getMovie"><i class="fas fa-search"></i></button>
           </div>
           <!-- c'è ma non mi piace :p -->
           <div class="select">
             <select v-model="selected" @click="getGenre">
-              <option value="">Tutti i Generi</option>
+              <option value="">{{searchTitle}}</option>
               <option v-for="genre in movieGenres" :value="genre.id">{{ genre.name }}</option>
             </select>
           </div>
-          <div class="switch-lang">
+          <div class="switch-lang flex">
             <button class="ita"><span @click="ita">ITA</span></button>
             <button><span @click="eng">ENG</span></button>
           </div>
