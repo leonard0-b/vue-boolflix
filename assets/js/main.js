@@ -38,6 +38,14 @@ var app = new Vue (
       votes: function (vote) {
         return Math.round(vote / 2)
         console.log(vote);
+      },
+      ita: function (){
+        this.lang = "it"
+        console.log(this.lang);
+      },
+      eng: function (){
+        this.lang = "en"
+        console.log(this.lang);
       }
     }
   }

@@ -17,9 +17,15 @@
         <div class="logo">
           <h1>Bongiflix</h1>
         </div>
-        <div class="search-bar">
-          <input type="text" name="" value="" placeholder="Cerca un film o una serie..." v-model="search" @keyup.enter="getMovie">
-          <button @click="getMovie"><i class="fas fa-search"></i></button>
+        <div class="cmd flex">
+          <div class="search-bar">
+            <input type="text" name="" value="" placeholder="Cerca un film o una serie..." v-model="search" @keyup.enter="getMovie">
+            <button @click="getMovie"><i class="fas fa-search"></i></button>
+          </div>
+          <div class="switch-lang">
+            <button class="ita"><span @click="ita">ITA</span></button>
+            <button><span @click="eng">ENG</span></button>
+          </div>
         </div>
       </div>
     </header>
