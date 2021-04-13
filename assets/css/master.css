@@ -29,7 +29,7 @@
 
 .voto {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 15px;
   font-style: italic;
 }
 /* /UTILITIES */
@@ -72,6 +72,7 @@ header {
 }
 
 .search-bar > input {
+  width: 200px;
   color: #fff;
   border: 0;
   outline: 0;
@@ -112,8 +113,8 @@ main {
 
 .card {
   border-radius: 10px;
-  width: calc(100%/4 - 20px);
-  margin: 15px 10px;
+  width: calc(100%/4 - 10px);
+  margin: 10px 5px;
   height: 530px;
   position: relative;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -161,8 +162,18 @@ main {
 
 .overlay > p.voto {
   position: absolute;
+  bottom: 50px;
+  left: 20px;
+}
+
+div.stars {
+  position: absolute;
   bottom: 20px;
   left: 20px;
+}
+
+.stars > p > i {
+  color: #fff;
 }
 /* /MAIN */
 

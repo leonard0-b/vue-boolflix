@@ -18,7 +18,7 @@
           <h1>Bongiflix</h1>
         </div>
         <div class="search-bar">
-          <input type="text" name="" value="" placeholder="Cerca un film..." v-model="search" @keyup.enter="getMovie">
+          <input type="text" name="" value="" placeholder="Cerca un film o una serie..." v-model="search" @keyup.enter="getMovie">
           <button @click="getMovie"><i class="fas fa-search"></i></button>
         </div>
       </div>
@@ -35,6 +35,9 @@
             <p class="original-title">{{ movie.original_title || movie.original_name }}</p>
             <div class="descrizione">
               <p class="overview">{{ movie.overview }}</p>
+            </div>
+            <div class="stars flex">
+              <p v-for="i in 5"><i class="far fa-star"></i></p>
             </div>
             <!-- <p>{{ movie.original_language }}</p> -->
             <p class="voto">{{ movie.vote_average }}/10</p>
