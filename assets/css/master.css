@@ -18,7 +18,8 @@
 
 .original-title {
   font-weight: 400;
-  font-size: 25px;
+  font-size: 13px;
+  margin-top: 5px;
   font-style: italic;
 }
 
@@ -113,8 +114,8 @@ main {
 
 .card {
   border-radius: 10px;
-  width: calc(100%/4 - 10px);
-  margin: 10px 5px;
+  width: calc(100%/4 - 6px);
+  margin: 6px 3px;
   height: 530px;
   position: relative;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
@@ -135,6 +136,7 @@ main {
   margin-top: 10px;
   height: 30%;
   overflow-y: auto;
+  padding: 0 5px;
 }
 
 .descrizione > p {
@@ -174,6 +176,10 @@ div.stars {
 
 .stars > p > i {
   color: #fff;
+}
+
+.yellow {
+  color: yellow !important;
 }
 /* /MAIN */
 

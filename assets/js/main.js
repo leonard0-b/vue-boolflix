@@ -30,11 +30,15 @@ var app = new Vue (
 
               // ordinol'array in base al voto, dal maggiore al minore
               this.movies.sort((a, b) => (b.vote_average - a.vote_average));
+              this.search = "";
             });
           })
         })
       },
-
+      votes: function (vote) {
+        return Math.round(vote / 2)
+        console.log(vote);
+      }
     }
   }
 );
