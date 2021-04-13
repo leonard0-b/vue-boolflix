@@ -175,12 +175,9 @@ div.stars {
 }
 
 .stars > p > i {
-  color: #fff;
+  color: #d32f2f;
 }
 
-.yellow {
-  color: yellow !important;
-}
 /* /MAIN */
 
 /* scrollbar */

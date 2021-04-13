@@ -37,7 +37,7 @@
               <p class="overview">{{ movie.overview }}</p>
             </div>
             <div class="stars flex">
-              <p><i v-for="i in votes(movie.vote_average)" class="fas fa-star yellow"></i></p>
+              <p><i v-for="i in votes(movie.vote_average)" class="fas fa-star"></i></p>
               <p><i v-for="i in (5 - votes(movie.vote_average))" class="far fa-star"></i></p>
             </div>
             <!-- <p>{{ movie.original_language }}</p> -->
