@@ -26,7 +26,7 @@
     </header>
     <main>
       <div class="movie-content flex">
-        <div class="prev flex"><i class="fas fa-sort-up" @click="prev" @keyup.left="prev"></i></div>
+        <div class="prev flex"><i class="fas fa-sort-up" @click="prev" @keyup.enter="prev"></i></div>
         <div class="img-cons">
           <img :src="cons[index]" alt="">
           <h1 v-if="index == 0">Her</h1>

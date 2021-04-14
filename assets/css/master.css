@@ -262,6 +262,10 @@ main::-webkit-scrollbar-thumb {
   .card {
     width: calc(100%/3 - 6px)
   }
+
+  .logo > a {
+    display: none;
+  }
 }
 
 @media all and (max-width: 768px) {

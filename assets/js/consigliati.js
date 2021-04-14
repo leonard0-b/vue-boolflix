@@ -14,9 +14,6 @@ var app = new Vue (
         "https://image.tmdb.org/t/p/original/bUxoCldj0V9Y2bgQuUSFbSjKEWw.jpg",
       ],
     },
-    mounted(){
-      
-    },
     methods: {
      // creo funzione per scorrere avanti al click della freccia destra
      next: function() {
@@ -39,7 +36,23 @@ var app = new Vue (
          // altrimenti se l'index è uguale a lungheza array - 1 torna all'ultima
          this.index = this.cons.length - 1
        }
+       console.log("ciao cipollino");
      },
-    }
+     keyboard: function(e){
+       var x = event.keyCode;
+       // If the pressed keyboard button is "a" or "A" (using caps lock or shift), alert some text.
+      if (x == "ArrowRight") {
+        console.log("freccia destra");
+      } else if (x == "ArrowLeft") {
+        console.log("freccia sinistra");
+      }
+      else {
+      console.log(event.key);
+      }
+     }
+   },
+   beforeMounted(){
+     this.keyboard();
+   },
   }
 );
