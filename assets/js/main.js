@@ -41,9 +41,9 @@ var app = new Vue (
             this.series.forEach((episodi) => {
               // console.log(episodi);
               this.movies.push(episodi);
+              this.search = "";
               // ordino l'array in base al voto, dal maggiore al minore
               this.movies.sort((a, b) => (b.vote_average - a.vote_average));
-              this.search = "";
             });
           })
         })
