@@ -13,7 +13,16 @@ var app = new Vue (
       selected: "",
       placeholderSearch: "Cerca un film o una serie...",
       searchTitle: "Tutti i Generi",
-      movieGenres: []
+      movieGenres: [],
+      index: 0,
+      cons: [
+        "https://image.tmdb.org/t/p/original/nG5zmbVeYlcDhckrPAe06fArywn.jpg",
+        "https://image.tmdb.org/t/p/original/fEolr0bwBR7m0sHSJC8u8grnhBv.jpg",
+        "https://image.tmdb.org/t/p/original/tNE9HGcFOH8EpCmzO7XCYwqguI0.jpg",
+        "https://image.tmdb.org/t/p/original/n0sUMqBk6BNZfFUfaA99GmMdoEq.jpg",
+        "https://image.tmdb.org/t/p/original/98OOSRzIpH3AbRllrCgHfYLrQMw.jpg",
+        "https://image.tmdb.org/t/p/original/bUxoCldj0V9Y2bgQuUSFbSjKEWw.jpg"
+      ]
     },
     methods: {
       getMovie: function (){
@@ -31,7 +40,6 @@ var app = new Vue (
             this.series.forEach((episodi) => {
               // console.log(episodi);
               this.movies.push(episodi);
-
               // ordino l'array in base al voto, dal maggiore al minore
               this.movies.sort((a, b) => (b.vote_average - a.vote_average));
               this.search = "";
@@ -61,7 +69,7 @@ var app = new Vue (
             console.log(response.data.genres);
             this.movieGenres = response.data.genres;
         })
-      }
+      },
     }
   }
 );

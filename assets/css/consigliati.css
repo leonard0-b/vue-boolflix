@@ -61,171 +61,96 @@ header {
   right: 0;
   left: 0;
 }
-
-.logo {
-  align-items: center;
-}
-
-.logo > a {
-  margin-left: 50px;
-  color: #fff;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.search-bar > button {
-  outline: none;
-  border: none;
-  background-color: inherit;
-}
-
-.search-bar > button > i {
-  color: #fff;
-}
-
-.search-bar > input {
-  width: 250px;
-  color: #fff;
-  border: 0;
-  outline: 0;
-  background-color: inherit;
-}
-
-::placeholder {
-  color: #fff;
-}
-
-select {
-  width: 130px;
-  margin-left: 20px;
-  border-radius: 10px;
-  padding: 10px 15px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  background-color: inherit;
-  border: none;
-  color: #fff;
-}
-
-option {
-  background-color: #d32f2f;
-}
-
-.search-bar {
-  padding: 10px 15px;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-.cmd {
-  align-items: center;
-}
-
-.cmd > .switch-lang {
-  margin-left: 30px;
-}
-
-.switch-lang > * {
-  border: 0;
-  background-color: inherit;
-  color: #fff;
-  padding: 0 10px;
-}
-
-.switch-lang > button > span {
-  cursor: pointer;
-}
-
-.ita {
-  border-right: 2px solid #fff;
-}
 /* /NAVBAR */
 
 /* MAIN */
 body {
   overflow-y: hidden;
+  position: relative;
 }
 
 main {
-  margin-top: 100px;
   height: calc(100vh - 100px);
   overflow-y: auto;
-  margin-bottom: 50px;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+}
+
+.logo {
+  align-items: center;
+}
+
+.back {
+  margin-left: auto;
+}
+
+.back > a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .movie-content {
   flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
 }
 
-.overlay > p {
-  color: #fff;
+.img-cons {
+  height: 100%;
+}
+
+.img-cons > img {
+  height: 100%;
+}
+
+.prev, .next {
+  align-items: center;
+  color: #d32f2f;
+}
+
+.prev > i {
+  transform: rotate(270deg);
+  font-size: 30px;
   cursor: pointer;
 }
 
-.card {
-  border-radius: 10px;
-  width: calc(100%/4 - 6px);
-  margin: 6px 3px;
-  height: 500px;
+.next > i {
+  transform: rotate(90deg);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.img-cons {
   position: relative;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.poster > img {
-  border-radius: 10px;
-  width: 100%;
-  height: 500px;
-}
-
-.card:hover .overlay {
-  border-radius: 10px;
-  display: flex;
-}
-
-.descrizione {
-  margin-top: 10px;
-  height: 30%;
-  overflow-y: auto;
-  padding: 0 5px;
-}
-
-.descrizione > p {
-  color: #fff;
-}
-
-.overlay {
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  padding: 20px;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.overlay > img {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 30px;
-}
-
-.overlay > p.voto {
+.img-cons > h1 {
   position: absolute;
   bottom: 50px;
-  left: 20px;
+  right: 100px;
 }
 
-div.stars {
+.img-cons > .year {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 15px;
+  right: 100px;
+  color: #fff;
+  font-style: italic;
+  font-size: 30px;
 }
 
-.stars > p > i {
-  color: #d32f2f;
+.img-cons > .reg {
+  position: absolute;
+  bottom: 15px;
+  left: 70px;
+  color: #fff;
+  font-size: 30px;
 }
+
 
 /* /MAIN */
 

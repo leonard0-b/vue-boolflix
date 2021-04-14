@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/consigliati.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Bongiflix - Consigliati</title>
+</head>
+<body>
+</head>
+<body>
+  <div id="root">
+    <header>
+      <div class="container flex">
+        <div class="logo flex">
+          <h1>Bongiflix</h1>
+        </div>
+        <div class="back">
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="movie-content flex">
+        <div class="prev flex"><i class="fas fa-sort-up" @click="prev" @keyup.left="prev"></i></div>
+        <div class="img-cons">
+          <img :src="cons[index]" alt="">
+          <h1 v-if="index == 0">Her</h1>
+          <p class="reg" v-if="index == 0">Spike Jonze</p>
+          <p class="year" v-if="index == 0">2013</p>
+          <h1 v-else-if="index == 1">Lost In Translation</h1>
+          <p class="reg" v-if="index == 1">Sofia Coppola</p>
+          <p class="year" v-if="index == 1">2003</p>
+          <h1 v-else-if="index == 2">The Lighthouse</h1>
+          <p class="reg" v-if="index == 2">Robert Eggers</p>
+          <p class="year" v-if="index == 2">2019</p>
+          <h1 v-else-if="index == 3">Memories of a Murder</h1>
+          <p class="reg" v-if="index == 3">Bong Joon-ho</p>
+          <p class="year" v-if="index == 3">2003</p>
+          <h1 v-else-if="index == 4">Dogtooth</h1>
+          <p class="reg" v-if="index == 4">Yorgos Lanthimos</p>
+          <p class="year" v-if="index == 4">2009</p>
+          <h1 v-else-if="index == 5">Le Daim</h1>
+          <p class="reg" v-if="index == 5">Quentin Dupieux</p>
+          <p class="year" v-if="index == 5">2019</p>
+          <h1 v-else></h1>
+        </div>
+        <div class="next flex"><i class="fas fa-sort-up" @click="next" @keyup.39="next"></i></div>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="./assets/js/consigliati.js" charset="utf-8"></script>
+</body>
+</html>
+
+
+</body>
+</html>
