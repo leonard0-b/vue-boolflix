@@ -47,6 +47,7 @@ body {
 
 .container {
   width: 80%;
+  max-width: 1240px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
@@ -146,6 +147,8 @@ body {
 }
 
 main {
+  max-width: 1920px;
+  margin: 0 auto;
   margin-top: 100px;
   height: calc(100vh - 100px);
   overflow-y: auto;
@@ -163,7 +166,7 @@ main {
 
 .card {
   border-radius: 10px;
-  width: calc(100%/4 - 6px);
+  width: calc(100%/5 - 6px);
   margin: 6px 3px;
   height: 500px;
   position: relative;
@@ -280,6 +283,10 @@ main::-webkit-scrollbar-thumb {
 
   .search-bar > input {
     width: 180px;
+  }
+
+  .movie-content {
+    margin-top: 0;
   }
 }
 
