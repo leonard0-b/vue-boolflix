@@ -261,6 +261,7 @@ main::-webkit-scrollbar-thumb {
   border-radius: 20px; /* roundness of the scroll thumb */
 }
 /* /scrollbar */
+
 @media all and (max-width: 1024px) {
   .card {
     width: calc(100%/3 - 6px)
