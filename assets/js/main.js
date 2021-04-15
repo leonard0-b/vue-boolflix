@@ -27,12 +27,14 @@ var app = new Vue (
     },
     methods: {
       getMovie: function (){
+        // prima chiamata API per prendere i film
         axios.get(`${this.uri}/search/movie?api_key=${this.api_key}&language=${this.lang}&query=${this.search}`)
           .then((response) => {
           console.log(response.data.results);
           this.movies = response.data.results;
           console.log(this.movies);
 
+        // seconda chimamata API per prendere le serie tv
         axios.get(`${this.uri}/search/tv?api_key=${this.api_key}&language=${this.lang}&query=${this.search}`)
           .then((response)=> {
             // console.log(response);
@@ -49,10 +51,12 @@ var app = new Vue (
         })
       },
       votes: function (vote) {
+        // arrotondare per eccesso il numero e dividerlo per due (voto 10 avrà 5 stelline)
         return Math.round(vote / 2)
         console.log(vote);
       },
       ita: function (){
+        // cambio lingua italiano
         this.lang = "it"
         this.placeholderSearch = "Cerca un film o una serie...";
         this.searchTitle = "Tutti i Generi"
@@ -60,6 +64,7 @@ var app = new Vue (
         console.log(this.lang);
       },
       eng: function (){
+        // cambio lingua inglese
         this.lang = "en"
         this.placeholderSearch = "Search movies or tv series..."
         this.searchTitle = "All Genres"
@@ -67,6 +72,7 @@ var app = new Vue (
         console.log(this.lang);
       },
       getGenre: function (){
+        // chiamata API per prendere i generi
         axios.get(`${this.uri}/genre/movie/list?api_key=${this.api_key}&language=${this.lang}`)
           .then((response) => {
             console.log(response.data.genres);
